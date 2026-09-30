@@ -1,32 +1,26 @@
-# React + TypeScript + Vite
+# CodeMisconceptionOS (Mecha)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+CodeMisconceptionOS is an interactive, browser-based coding education platform designed to help developers identify and overcome common programming misconceptions. 
 
-Currently, two official plugins are available:
+## Features
+- **Curated Challenges**: Test your knowledge of List Iteration, Mutable Defaults, Variable Shadowing, and more.
+- **Multi-language Support**: Python, JavaScript, Java, C++, Rust, HTML, and CSS.
+- **Socratic AI Tutor (Spark)**: Fully local, offline AI mentor that guides you through fixing bugs without giving you the direct answers.
+- **Browser-based Python Execution**: Uses Pyodide to run Python code entirely locally.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## GitHub Repository
+This repository is publicly accessible on GitHub here:
+**[https://github.com/25f2004239/mecha](https://github.com/25f2004239/mecha)**
 
-## React Compiler
+## How to Run Locally
+1. Ensure you have Node.js installed.
+2. Run `npm install` to install dependencies.
+3. Run `npm run dev` to start the local development server.
+4. Open the provided localhost link in your browser.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Built With
+- React
+- Vite
+- PrismJS
+- Pyodide
+- Lucide React
