@@ -10,7 +10,7 @@ import 'prismjs/components/prism-c';
 import 'prismjs/components/prism-cpp';
 import { Play, CheckCircle, ArrowRight, ShieldCheck } from 'lucide-react';
 import { addSolvedProblem } from '../utils/stats';
-import { getChallengeCode, getVerificationCode, verifyFix } from '../utils/challenges';
+import { getVerificationCode, verifyFix } from '../utils/challenges';
 
 export default function Verification({ config, onComplete }: { config: any, onComplete: () => void }) {
   const [code, setCode] = useState(() => {
@@ -22,7 +22,6 @@ export default function Verification({ config, onComplete }: { config: any, onCo
     return getVerificationCode(topicToUse, config.language).code;
   });
 
-  const chal = getVerificationCode(config.mode === 'random' ? 'list_iteration' : config.topic, config.language);
   
   const [output, setOutput] = useState<{ type: 'error' | 'success' | null; text: string }>({ type: null, text: '' });
   const [isFixed, setIsFixed] = useState(false);

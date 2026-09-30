@@ -18,7 +18,7 @@ export default defineConfig({
           req.on('data', chunk => { body += chunk.toString(); });
           req.on('end', async () => {
             try {
-              const fetch = (await import('node-fetch')).default || globalThis.fetch;
+              const fetch = globalThis.fetch;
               const response = await fetch('https://text.pollinations.ai/openai', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
